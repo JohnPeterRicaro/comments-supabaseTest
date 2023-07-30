@@ -4,7 +4,7 @@ import {
   useQueryClient,
 } from "@tanstack/react-query";
 import { useState } from "react";
-import { supabase } from "../lib/api/supabaseClient";
+import { supabase } from "../api/supabaseClient";
 import uuid from "react-uuid";
 
 const CreateComment = () => {

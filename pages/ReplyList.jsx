@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { supabase } from "./lib/api/supabaseClient";
+import { supabase } from "../api/supabaseClient";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
 export default function ReplyList({ commentID }) {

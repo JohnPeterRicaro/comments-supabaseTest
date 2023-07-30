@@ -1,6 +1,6 @@
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import Comments  from "./components/comments.jsx"
-import CreateComment from "./components/createComment.jsx"
+import Comments  from "../components/comments.jsx"
+import CreateComment from "../components/createComment.jsx"
 
 const queryClient = new QueryClient()
 
