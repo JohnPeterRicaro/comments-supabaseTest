@@ -3,7 +3,7 @@ import { supabase } from "./lib/api/supabaseClient";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import uuid from "react-uuid";
 
-export function ReplyForm({ commentID }) {
+export default function ReplyForm({ commentID }) {
   const [isReplying, setIsReplying] = useState(false);
   const [isID, setIsID] = useState(null);
   const [isUsername, setIsUsername] = useState("");

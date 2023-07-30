@@ -2,7 +2,7 @@ import { useState } from "react";
 import { supabase } from "./lib/api/supabaseClient";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 
-export function ReplyList({ commentID }) {
+export default function ReplyList({ commentID }) {
   const [isEditing, setIsEditing] = useState("");
   const [isEditingId, setIsEdtingId] = useState(null);
   const [isDeletingId, setIsDeletingId] = useState(null);

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { supabase } from "./api/supabaseClient";
+import { supabase } from "../lib/api/supabaseClient";
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { replyHandler, ReplyForm } from "../ReplyComment";
 import { ReplyList } from "../ReplyList";
