@@ -4,7 +4,7 @@ import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import { replyHandler, ReplyForm } from "../pages/ReplyComment";
 import { ReplyList } from "../pages/ReplyList";
 
-function Comments() {
+export default function Comments() {
   const [editingCommentId, setEditingCommentID] = useState(null);
   const [editingComment, setEditingComment] = useState("");
   const [deletingCommentID, setDeletingCommentID] = useState(null);
@@ -60,9 +60,9 @@ function Comments() {
       },
     }
   );
-
-  if (status === "loading") return <div>Loading...</div>;
-  if (status === "error") return <div>Error Fetching Data</div>;
+  const handleDelete = () => {
+    mutateDelete.mutate();
+  };
 
   return (
     <ul>
@@ -70,9 +70,6 @@ function Comments() {
         const handleSubmit = (e) => {
           e.preventDefault();
           mutateEditComment();
-        };
-        const handleDelete = () => {
-          mutateDelete.mutate();
         };
         return (
           <li className="w-[450px] h-auto mt-[40px] mb-[40px]" key={comment.id}>
@@ -144,5 +141,3 @@ function Comments() {
     </ul>
   );
 }
-
-export default Comments;
